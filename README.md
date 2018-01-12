@@ -27,7 +27,7 @@
 
 * `Vue` @2.3.3, vue-router, vuex, axios
 * `less` (不太习惯stylus所以我还是继续使用less了)
-* `ES6`
+* `ES6` [standardjs规范](https://github.com/standard/standard/blob/master/docs/RULES-zhcn.md)
 * `Express`
 * ~~~lib-flexbile~~~ `amfe-flexible@2.0`,  `px2rem`
 

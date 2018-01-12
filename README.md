@@ -4,7 +4,7 @@
 
 ## 介绍
 
-该项目来源[HuangYi](https://github.com/ustbhuangyi), 之前写过他的[eleApp](https://github.com/forzeny/eleApp),后来发现这个音乐App，可惜未开源，还好他的学生把这个项目开源了，所以就有了这个仓库，后面回提到我的一些改进。
+该项目来源[HuangYi](https://github.com/ustbhuangyi), 之前写过他的[eleApp](https://github.com/forzeny/eleApp),后来发现这个音乐App，可惜未开源，还好他的学生把这个项目开源了，所以就有了这个仓库，后面回提到我的一些改进，总结。
 
 毕业后来到的这家公司使用Vue，之前实习接触过React和Ng，所以上手较快,上手就是维护Vuex项目，当然我要学习不使用vuex的场景，同时老项目代码写的不是很好，所以就准备找几个好的项目来学习所以就有了[eleApp](https://github.com/forzeny/eleApp)和本项目
 
@@ -67,15 +67,6 @@
 * min-player [进度条实现](https://codepen.io/xgad/post/svg-radial-progress-meters)
 * vue@2.5+  [ios 不能播放问题](https://github.com/DDFE/DDFE-blog/issues/24)
 
-## 本地预览
-
-```bash
-git clone hhttps://github.com/forzeny/Music-Player.git
-$ cd Music-Player
-$ yarn install
-$ yarn run dev
-```
-
 ## 改进及优化
 
 * QQ音乐UI
@@ -114,3 +105,18 @@ $ yarn run dev
 试了下腾讯的[weTest](http://wetest.qq.com/product/cloudphone?from=default_automail_new) 收费，没继续用
 
 后来发现  GenyMotion 不准备测试
+
+## 总结
+
+* 截止20180112基本完成了我预期的开发，比如滚动库，歌词的处理等是原作者开源项目的，我在这个项目学到的东西主要是学习作者的编程风格，习惯，更好的理解Vue中的知识点
+* 有了本项目，[eleApp](https://github.com/forzeny/eleApp)，和我工作中的Vue开发经验，以及[element ui](https://github.com/ElemeFE/element)部分源码的阅读，至此已经对Vue的使用及特性有了一定的理解，同时我也在阅读Vue的一些源代码去深入的理解Vue，这样会更好的处理开发中遇到的问题
+* 如果你还不清楚Vue的学习路线，我最近发现了[这篇文章](https://segmentfault.com/a/1190000012692321)可以去看一看，还可以检验自己是否有知识点遗漏的地方，当然这远远还是不够的，Vue有更多的东西需要自己去探索使用
+
+## 本地预览
+
+```bash
+git clone hhttps://github.com/forzeny/Music-Player.git
+$ cd Music-Player
+$ yarn install
+$ yarn run dev
+```

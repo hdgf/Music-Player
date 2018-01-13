@@ -6,7 +6,7 @@
 
 该项目来源[HuangYi](https://github.com/ustbhuangyi), 之前写过他的[eleApp](https://github.com/forzeny/eleApp),后来发现这个音乐App，可惜未开源，还好他的学生把这个项目开源了，所以就有了这个仓库，后面回提到我的一些改进，总结。
 
-毕业后来到的这家公司使用Vue，之前实习接触过React和Ng，所以上手较快,上手就是维护Vuex项目，当然我要学习不使用vuex的场景，同时老项目代码写的不是很好，所以就准备找几个好的项目来学习所以就有了[eleApp](https://github.com/forzeny/eleApp)和本项目
+毕业后来到的这家公司使用Vue，之前实习接触过React和Ng，所以上手较快,上手就是维护Vuex项目，老项目代码写的不是很好，为了进一步理解Vue，所以就准备找几个好的项目来学习所以就有了[eleApp](https://github.com/forzeny/eleApp)和本项目
 
 数据来源QQ音乐JSONP，部分接口存在http header的限制所以用到了node，托管于VPS，PM2 部署，Nginx代理，
 
@@ -29,6 +29,7 @@
 * `less` (不太习惯stylus所以我还是继续使用less了)
 * `ES6` [standardjs规范](https://github.com/standard/standard/blob/master/docs/RULES-zhcn.md)
 * `Express`
+* `jsonp` `axios` `promise`
 * ~~~lib-flexbile~~~ `amfe-flexible@2.0`,  `px2rem`
 
 * `Vultr/heroku PM2 Nginx`

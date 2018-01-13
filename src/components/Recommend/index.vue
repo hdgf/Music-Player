@@ -36,138 +36,142 @@
   </div>
 </template>
 <script>
-import { getRecommend, getMusicList } from 'api/recommend'
-import * as config from 'api/config'
-import Slider from 'containers/Slider'
-import Loading from 'containers/Loading'
-import Scroll from 'containers/Scroll'
-import BScroll from 'better-scroll'
-import axios from 'axios'
-import { playlistMixin } from 'common/js/mixin'
-import { mapMutations } from "vuex"
+  import { getRecommend, getMusicList } from 'api/recommend'
+  import * as config from 'api/config'
+  import Slider from 'containers/Slider'
+  import Loading from 'containers/Loading'
+  import Scroll from 'containers/Scroll'
+  import { playlistMixin } from 'common/js/mixin'
+  import { mapMutations } from 'vuex'
 
-export default {
-  name: 'recommend',
-  mixins: [playlistMixin],
-  data() {
-    return {
-      picData: [],
-      songList: [],
-    }
-  },
-  created() {
-    this.getRecommendPic()
-    this.getRecommendMusicList()
-  },
-  methods: {
-    handlePlayList(playList) {
-      const dom = document.getElementsByClassName('mini-player')[0]
-      const height = getComputedStyle(dom)['height']
-      const bottom = playList.length > 0 ? height : ''
-      this.$refs.scrollWrap.$el.style.bottom = bottom
-      this.$refs.scrollWrap.refresh()
-    },
-    getRecommendPic() {
-      getRecommend(config.recommendUrl, config.commonParam, config.recommendCptions).then((res) => {
-        if (res.code === config.ERR_OK) {
-          this.picData = res.data.slider
-        }
-      })
-    },
-    getRecommendMusicList() {
-      getMusicList(config.musicListUrl, config.musicListParam).then((res) => {
-        if (res.data.code === config.ERR_OK) {
-          this.songList = res.data.data.list
-        }
-      }).catch((error) => {
-        console.log('代理失败，请求假数据')
-        setTimeout(() => {
-          this.songList = require('../../../static/recommand.json').data.list
-        }, 2000)
-      })
-    },
-    loadImage() {
-      if (!this.checkLoad) {
-        this.checkLoad = true
-      } else {
-        return
+  export default {
+    name: 'recommend',
+    mixins: [playlistMixin],
+    data () {
+      return {
+        picData: [],
+        songList: []
       }
-      this.$refs.scrollWrap.refresh()
     },
-    selectItem(item) {
-      this.$router.push({
-        path: `/recommend/${item.dissid}`
+    created () {
+      this.getRecommendPic()
+      this.getRecommendMusicList()
+    },
+    methods: {
+      handlePlayList (playList) {
+        const dom = document.getElementsByClassName('mini-player')[0]
+        const height = getComputedStyle(dom)['height']
+        const bottom = playList.length > 0 ? height : ''
+        this.$refs.scrollWrap.$el.style.bottom = bottom
+        this.$refs.scrollWrap.refresh()
+      },
+      getRecommendPic () {
+        getRecommend(
+          config.recommendUrl,
+          config.commonParam,
+          config.recommendCptions
+        ).then(res => {
+          if (res.code === config.ERR_OK) {
+            this.picData = res.data.slider
+          }
+        })
+      },
+      getRecommendMusicList () {
+        getMusicList(config.musicListUrl, config.musicListParam)
+          .then(res => {
+            if (res.data.code === config.ERR_OK) {
+              this.songList = res.data.data.list
+            }
+          })
+          .catch(() => {
+            console.log('代理失败，请求假数据')
+            setTimeout(() => {
+              this.songList = require('../../../static/recommand.json').data.list
+            }, 2000)
+          })
+      },
+      loadImage () {
+        if (!this.checkLoad) {
+          this.checkLoad = true
+        } else {
+          return
+        }
+        this.$refs.scrollWrap.refresh()
+      },
+      selectItem (item) {
+        this.$router.push({
+          path: `/recommend/${item.dissid}`
+        })
+        this.setDisc(item)
+      },
+      ...mapMutations({
+        setDisc: 'SET_DISC'
       })
-      this.setDisc(item)
     },
-    ...mapMutations({
-      setDisc: 'SET_DISC'
-    })
-  },
-  components: {
-    Slider,
-    Loading,
-    Scroll
+    components: {
+      Slider,
+      Loading,
+      Scroll
+    }
   }
-}
 </script>
 <style lang="less" scoped>
-@import '~@/common/less/const.less';
-.recommend {
-	.scroll-wrapper {
-		background: #fff;
-		position: fixed;
-		overflow: hidden;
-		top: @marin-top-size;
-		left: 0;
-		right: 0;
-		bottom: 0;
-		.recommend-list {
-			.list-wrap {
-				.title {
-					height: 65px;
-					line-height: 65px;
-					text-align: center;
-					font-size: @font-size-medium;
-					color: #31c27c;
-				}
-				.content {
-					padding: 0 20px;
-					.content-item {
-						padding: 0 20px 20px 20px;
-						display: flex;
-						.list-pic {
-							width: 120px;
-							padding-right: 50px;
-							img {
-								width: 100%;
-								height: 100%;
-							}
-						}
-						.list-content {
-							flex: 1;
-							display: flex;
-							flex-direction: column;
-							justify-content: center;
-							.name {
-								// line-height: 20px;
-								font-size: 30px;
-								margin-bottom: 30px;
-								color: #000;
-							}
-							.dissname {
-								// line-height: 20px;
-								font-size: 25px;
-								color: #000;
-							}
-						}
-					}
-				}
-			}
-		}
-		.content-loading-wrap {
-			margin-top: 20px;
-		}
-	}
-}
+  @import '~@/common/less/const.less';
+  .recommend {
+    .scroll-wrapper {
+      background: #fff;
+      position: fixed;
+      overflow: hidden;
+      top: @marin-top-size;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      .recommend-list {
+        .list-wrap {
+          .title {
+            height: 65px;
+            line-height: 65px;
+            text-align: center;
+            font-size: @font-size-medium;
+            color: #31c27c;
+          }
+          .content {
+            padding: 0 20px;
+            .content-item {
+              padding: 0 20px 20px 20px;
+              display: flex;
+              .list-pic {
+                width: 120px;
+                padding-right: 50px;
+                img {
+                  width: 100%;
+                  height: 100%;
+                }
+              }
+              .list-content {
+                flex: 1;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                .name {
+                  // line-height: 20px;
+                  font-size: 30px;
+                  margin-bottom: 30px;
+                  color: #000;
+                }
+                .dissname {
+                  // line-height: 20px;
+                  font-size: 25px;
+                  color: #000;
+                }
+              }
+            }
+          }
+        }
+      }
+      .content-loading-wrap {
+        margin-top: 20px;
+      }
+    }
+  }
 </style>

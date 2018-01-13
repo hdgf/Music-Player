@@ -1,8 +1,9 @@
 # QQ 音乐 WebApp
 
-![GitHub stars:](https://img.shields.io/github/stars/forzeny/Music-Player.svg)
-![GitHub forks:](https://img.shields.io/github/forks/forzeny/Music-Player.svg)
-![GitHub issues:](https://img.shields.io/github/issues/forzeny/Music-Player.svg)
+[![GitHub stars](https://img.shields.io/github/stars/forzeny/Music-Player.svg)](https://github.com/forzeny/Music-Player/stargazers)
+[![GitHub forks](https://img.shields.io/github/forks/forzeny/Music-Player.svg)](https://github.com/forzeny/Music-Player/network)
+[![GitHub issues](https://img.shields.io/github/issues/forzeny/Music-Player.svg)](https://github.com/forzeny/Music-Player/issues)
+[![GitHub license](https://img.shields.io/github/license/forzeny/Music-Player.svg)](https://github.com/forzeny/Music-Player)
 
 ## 介绍
 

@@ -13,8 +13,7 @@
 
 数据来源 QQ 音乐 JSONP，部分接口存在 http header 的限制所以用到了 node，托管于 VPS，PM2 部署，Nginx 代理，
 
-### 扫一扫手机预览
-
+### 扫一扫手机预览 (微信右上角浏使用览器打开)
 <img src="./static/erweima.svg" width="200px"/>
 
 [二维码地址](http://45.77.79.163/Music)

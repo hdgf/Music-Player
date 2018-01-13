@@ -1,6 +1,8 @@
 # QQ 音乐 WebApp
 
-![Progress](http://progressed.io/bar/99?title=completed)
+![GitHub issues:](https://img.shields.io/github/issues/forzeny/Music-Player.svg)
+![GitHub forks:](https://img.shields.io/github/forks/forzeny/Music-Player.svg)
+![GitHub stars:](https://img.shields.io/github/stars/forzeny/Music-Player.svg)
 
 ## 介绍
 

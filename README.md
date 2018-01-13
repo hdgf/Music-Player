@@ -4,11 +4,11 @@
 
 ## 介绍
 
-该项目来源[HuangYi](https://github.com/ustbhuangyi), 之前写过他的[eleApp](https://github.com/forzeny/eleApp),后来发现这个音乐App，可惜未开源，还好他的学生把这个项目开源了，所以就有了这个仓库，后面回提到我的一些改进，总结。
+该项目来源[HuangYi](https://github.com/ustbhuangyi), 之前写过他的[eleApp](https://github.com/forzeny/eleApp),后来发现这个音乐 App，可惜未开源，还好他的学生把这个项目开源了，所以就有了这个仓库，后面回提到我的一些改进，总结。
 
-毕业后来到的这家公司使用Vue，之前实习接触过React和Ng，所以上手较快,上手就是维护Vuex项目，老项目代码写的不是很好，为了进一步理解Vue，所以就准备找几个好的项目来学习所以就有了[eleApp](https://github.com/forzeny/eleApp)和本项目
+毕业后来到的这家公司使用 Vue，之前实习接触过 React 和 Ng，所以上手较快,上手就是维护 Vuex 项目，老项目代码写的不是很好，为了进一步理解 Vue，所以就准备找几个好的项目来学习所以就有了[eleApp](https://github.com/forzeny/eleApp)和本项目
 
-数据来源QQ音乐JSONP，部分接口存在http header的限制所以用到了node，托管于VPS，PM2 部署，Nginx代理，
+数据来源 QQ 音乐 JSONP，部分接口存在 http header 的限制所以用到了 node，托管于 VPS，PM2 部署，Nginx 代理，
 
 [演示地址](http://45.77.79.163/Music)
 
@@ -26,11 +26,11 @@
 ## 相关
 
 * `Vue` @2.3.3, vue-router, vuex, axios
-* `less` (不太习惯stylus所以我还是继续使用less了)
-* `ES6` [standardjs规范](https://github.com/standard/standard/blob/master/docs/RULES-zhcn.md)
+* `less` (不太习惯 stylus 所以我还是继续使用 less 了)
+* `ES6` [standardjs 规范](https://github.com/standard/standard/blob/master/docs/RULES-zhcn.md)
 * `Express`
 * `jsonp` `axios` `promise`
-* ~~~lib-flexbile~~~ `amfe-flexible@2.0`,  `px2rem`
+* ~~~lib-flexbile~~~ `amfe-flexible@2.0`, `px2rem`
 
 * `Vultr/heroku PM2 Nginx`
 
@@ -70,48 +70,43 @@
 
 ## 改进及优化
 
-* QQ音乐UI
+* QQ 音乐 UI
 * 适配优化
 * 打包优化
 
 ### 打包
 
 * 分块：根据打包后的[分析报告](https://www.npmjs.com/package/webpack-bundle-analyzer)进行优化
-* 处理vendor：一般都是这部分体积大，相关类库一般不会变化，所以单独打包和其它文件一样加上chunkhash辨别文件是否变化，同时把manifest抽离出来，保证manifest变化不影响vendor变化导致缓存失效,这样默认就是304，现在我通过node把他设置成强缓存了....外加gzip
+* 处理 vendor：一般都是这部分体积大，相关类库一般不会变化，所以单独打包和其它文件一样加上 chunkhash 辨别文件是否变化，同时把 manifest 抽离出来，保证 manifest 变化不影响 vendor 变化导致缓存失效,这样默认就是 304，现在我通过 node 把他设置成强缓存了....外加 gzip
 * 采用路由懒加载
 
 ### 适配
 
-* 多端同构webApp, Hybrid，采用 [amfe-flexible@2.x](https://www.npmjs.com/package/amfe-flexible) （相比以前的版本我更倾向于2.x）配合px2rem
+* 多端同构 webApp, Hybrid，采用 [amfe-flexible@2.x](https://www.npmjs.com/package/amfe-flexible) （相比以前的版本我更倾向于 2.x）配合 px2rem
 
-* IOS的Safari浏览器和微信webview兼容性和适配问题,此应用未调用设备API
-
-* 以下图片为打包城IOS App后软件运行图，不能后台播放需要IOSER帮助，真机上动画流畅
+* IOS 的 Safari 浏览器和微信 webview 兼容性和适配问题,此应用未调用设备 API
 
 #### IOS 适配
 
-* iphoneX 真机截图 上下有留白
+* 打包成 ios Hybrid 系列模拟器正常 如 iphone7 Plus
 
-<img src="./static/WechatIMG505.png" width="50%"><img src="./static/WechatIMG506.png" width="50%">
+<img src="./static/hybrid.gif"/>
 
-* IOS系列模拟器正常
+* webApp && chrome
 
-![适配iphone 系列，X的刘海暂未处理](./static/WechatIMG507.jpeg)
-<img src="./static/WX20171230-154740@2x.png">
-<img src="./static/WX20171230-155034@2x.png">
-<img src="./static/WX20171230-155124@2x.png">
+<img src="./static/webApp.gif"/>
 
 #### Andriod 适配
 
 试了下腾讯的[weTest](http://wetest.qq.com/product/cloudphone?from=default_automail_new) 收费，没继续用
 
-后来发现  GenyMotion 不准备测试
+后来发现 GenyMotion 不准备测试
 
 ## 总结
 
-* 截止20180112基本完成了我预期的开发，比如滚动库，歌词的处理等是原作者开源项目的，我在这个项目学到的东西主要是学习作者的编程风格，习惯，更好的理解Vue中的知识点
-* 有了本项目，[eleApp](https://github.com/forzeny/eleApp)，和我工作中的Vue开发经验，以及[element ui](https://github.com/ElemeFE/element)部分源码的阅读，至此已经对Vue的使用及特性有了一定的理解，同时我也在阅读Vue的一些源代码去深入的理解Vue，这样会更好的处理开发中遇到的问题
-* 如果你还不清楚Vue的学习路线，我最近发现了[这篇文章](https://segmentfault.com/a/1190000012692321)可以去看一看，还可以检验自己是否有知识点遗漏的地方，当然这远远还是不够的，Vue有更多的东西需要自己去探索使用
+* 截止 20180112 基本完成了我预期的开发，比如滚动库，歌词的处理等是原作者开源项目的，我在这个项目学到的东西主要是学习作者的编程风格，习惯，更好的理解 Vue 中的知识点
+* 有了本项目，[eleApp](https://github.com/forzeny/eleApp)，和我工作中的 Vue 开发经验，以及[element ui](https://github.com/ElemeFE/element)部分源码的阅读，至此已经对 Vue 的使用及特性有了一定的理解，同时我也在阅读 Vue 的一些源代码去深入的理解 Vue，这样会更好的处理开发中遇到的问题
+* 如果你还不清楚 Vue 的学习路线，我最近发现了[这篇文章](https://segmentfault.com/a/1190000012692321)可以去看一看，还可以检验自己是否有知识点遗漏的地方，当然这远远还是不够的，Vue 有更多的东西需要自己去探索使用
 
 ## 本地预览
 

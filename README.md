@@ -45,7 +45,7 @@
 * master
 * [lib-flex](https://www.npmjs.com/package/amfe-flexible) 添加自适应布局 merge into master √
 * [ssr](https://ssr.vuejs.org/en/) 服务端渲染实现 (待完成)
-* [pre-render](https://github.com/chrisvfritz/prerender-spa-plugin) 预渲染实现 merge into master √
+* [pre-render](https://github.com/chrisvfritz/prerender-spa-plugin) 预渲染实现 merge into master x
 
 ## 组件
 

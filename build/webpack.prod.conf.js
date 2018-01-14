@@ -90,13 +90,13 @@ var webpackConfig = merge(baseWebpackConfig, {
         to: config.build.assetsSubDirectory,
         ignore: ['.*']
       }
-    ]),
-    new PrerenderSpaPlugin(
-      // Absolute path to compiled SPA
-      path.join(__dirname, '../music'),
-      // List of routes to prerender
-      // ['/', '/recommend', '/singer', '/rank', '/search']
-    )
+    ])
+    // new PrerenderSpaPlugin(
+    //   // Absolute path to compiled SPA
+    //   path.join(__dirname, '../music')
+    //   // List of routes to prerender
+    //   // ['/', '/recommend', '/singer', '/rank', '/search']
+    // )
   ]
 })
 

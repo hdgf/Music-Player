@@ -76,9 +76,8 @@ apiRoutes.get('/lyric', function(req, res) {
 app.use('/api', apiRoutes)
 
 var oneYear = 60 * 1000 * 60 * 24 * 365
-
-app.use(express.static('./music', { maxAge: oneYear }))
-app.use(history())
+app.use(history({ verbose: true }))
+app.use(express.static('music', { maxAge: oneYear }))
 module.exports = app.listen(port, function(err) {
   if (err) {
     console.log(err)

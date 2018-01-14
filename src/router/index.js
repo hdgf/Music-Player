@@ -36,6 +36,11 @@ const Recommend = resolve => {
     resolve(module)
   })
 }
+const NotFound = resolve => {
+  import('containers/NotFound').then(module => {
+    resolve(module)
+  })
+}
 Vue.use(Router)
 
 export default new Router({
@@ -87,6 +92,10 @@ export default new Router({
           component: SingerDetail
         }
       ]
+    },
+    {
+      path: '*',
+      component: NotFound
     }
   ]
 })

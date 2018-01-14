@@ -33,22 +33,22 @@
         default: false
       }
     },
-    mounted() {
+    mounted () {
       this.$nextTick(() => {
         this._initScroll()
       })
     },
     methods: {
-      _initScroll() {
+      _initScroll () {
         if (!this.$refs.wrapper) {
           return
         }
         this.scroll = new BScroll(this.$refs.wrapper, {
           click: this.click,
-          probeType: this.probeType,
+          probeType: this.probeType
         })
         if (this.listenScroll) {
-          this.scroll.on('scroll', (pos) => {
+          this.scroll.on('scroll', pos => {
             this.$emit('scroll', pos)
           })
         }
@@ -65,18 +65,18 @@
           })
         }
       },
-      refresh() {
+      refresh () {
         this.scroll && this.scroll.refresh()
       },
-      scrollTo() {
+      scrollTo () {
         this.scroll.scrollTo.apply(this.scroll, arguments)
       },
-      scrollToElement() {
+      scrollToElement () {
         this.scroll.scrollToElement.apply(this.scroll, arguments)
       }
     },
     watch: {
-      data(val) {
+      data (val) {
         this.$nextTick(() => {
           this.refresh()
         })

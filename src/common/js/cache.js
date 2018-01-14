@@ -13,7 +13,7 @@ function insertArray(arr, val, compare, maxlen) {
   }
   arr.unshift(val) // 向数组前插
   if (maxlen && arr.length > maxlen) {
-    arr.pop() //删掉数据最后一个
+    arr.pop() // 删掉数据最后一个
   }
 }
 export function saveSearch(query) {
@@ -22,7 +22,7 @@ export function saveSearch(query) {
     searchs,
     query,
     item => {
-      return (item === query)
+      return item === query
     },
     SEARCH_MAX_LENGTH
   )
@@ -35,17 +35,17 @@ export function loadSearch() {
 
 function deleteItem(arr, compare) {
   const index = arr.findIndex(compare)
-  if(index > -1) {
+  if (index > -1) {
     arr.splice(index, 1)
   }
 }
 export function deleteSearch(query) {
   let searchs = storage.get(SEARCH_KEY, [])
-  deleteItem(searchs, (item) => {
+  deleteItem(searchs, item => {
     return item === query
   })
   storage.set(SEARCH_KEY, searchs)
-  return searchs  
+  return searchs
 }
 export function clearSearch() {
   storage.remove(SEARCH_KEY)

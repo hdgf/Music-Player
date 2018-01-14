@@ -12,18 +12,12 @@ export const mode = state => state.mode
 
 export const currentIndex = state => state.currentIndex
 
-export const currentSong = state => {
-	return state.playList[state.currentIndex] || {}
-}
+export const currentSong = state => state.playList[state.currentIndex] || {}
 
-export const disc = state => {
-	return state.disc
-}
+export const disc = state => state.disc
 
-export const topList = state => {
-	return state.topList
-}
+export const topList = state => state.topList
 
-export const searchHistory = state => {
-	return state.searchHistory
-}
+export const searchHistory = state => state.searchHistory
+
+export const favoriteList = state => {}

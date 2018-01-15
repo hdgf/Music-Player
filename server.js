@@ -64,6 +64,19 @@ apiRoutes.get('/lyric', function(req, res) {
       console.log(e)
     })
 })
+apiRoutes.get('/getDisc', function(req, res) {
+  const url = 'http://ustbhuangyi.com/music/api/getCdInfo'
+  axios
+    .get(url, {
+      params: req.query
+    })
+    .then(response => {
+      res.json(response.data)
+    })
+    .catch(e => {
+      console.log(e)
+    })
+})
 app.use('/api', apiRoutes)
 var oneYear = 60 * 1000 * 60 * 24 * 365
 app.use(history())

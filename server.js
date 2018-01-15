@@ -77,7 +77,7 @@ apiRouters.get('/getDisc', function(req, res) {
       console.log(e)
     })
 })
-anotherApiRouters.get('/api/getDisc', function(req, res) {
+anotherApiRouters.get('/recommend/api/getDisc', function(req, res) {
   const url = 'http://ustbhuangyi.com/music/api/getCdInfo'
   axios
     .get(url, {
@@ -92,7 +92,7 @@ anotherApiRouters.get('/api/getDisc', function(req, res) {
 })
 var oneYear = 60 * 1000 * 60 * 24 * 365
 app.use('/api', apiRouters)
-app.use('/recommend', anotherApiRouters)
+app.use('/Music', anotherApiRouters)
 app.use(history())
 app.use(express.static('./music', { maxAge: oneYear }))
 module.exports = app.listen(port, function(err) {

@@ -1,22 +1,15 @@
 var express = require('express')
 var config = require('./config/index')
 var axios = require('axios')
-
 var port = process.env.PORT || config.build.port
-
 var app = express()
 var compression = require('compression')
-
-var apiRoutes = express.Router('./')
+var apiRoutes = express.Router('/')
 var serveStatic = require('serve-static')
-
 var history = require('connect-history-api-fallback')
-
 app.use(compression())
-
 apiRoutes.get('/getDisc', function(req, res) {
   const url = 'http://ustbhuangyi.com/music/api/getCdInfo'
-
   axios
     .get(url, {
       params: req.query
@@ -45,10 +38,8 @@ apiRoutes.get('/getMusicList', function(req, res) {
       console.log(e)
     })
 })
-
 apiRoutes.get('/lyric', function(req, res) {
   var url = 'https://c.y.qq.com/lyric/fcgi-bin/fcg_query_lyric_new.fcg'
-
   axios
     .get(url, {
       headers: {
@@ -72,12 +63,10 @@ apiRoutes.get('/lyric', function(req, res) {
       console.log(e)
     })
 })
-
 app.use('/api', apiRoutes)
-
 var oneYear = 60 * 1000 * 60 * 24 * 365
-app.use(history({ verbose: true }))
-app.use(express.static('music', { maxAge: oneYear }))
+app.use(history())
+app.use(express.static('./music', { maxAge: oneYear }))
 module.exports = app.listen(port, function(err) {
   if (err) {
     console.log(err)

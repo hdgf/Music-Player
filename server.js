@@ -5,7 +5,7 @@ var port = process.env.PORT || config.build.port
 var app = express()
 var compression = require('compression')
 var apiRoutes = express.Router('/')
-var serveStatic = require('serve-static')
+// var serveStatic = require('serve-static')
 var history = require('connect-history-api-fallback')
 app.use(compression())
 apiRoutes.get('/getDisc', function(req, res) {
@@ -51,7 +51,8 @@ apiRoutes.get('/lyric', function(req, res) {
     .then(response => {
       var ret = response.data
       if (typeof ret === 'string') {
-        var reg = /^\w+\(({[^\(\)]+})\)$/
+        // var reg = /^\w+\(({[^\(\)]+})\)$/
+        var reg = /{(.*)}/g
         var matches = response.data.match(reg)
         if (matches) {
           ret = JSON.parse(matches[1])

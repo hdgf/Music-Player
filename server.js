@@ -8,7 +8,7 @@ var app = express()
 var compression = require('compression')
 
 var apiRoutes = express.Router('./')
-var serveStatic = require('serve-static')
+// var serveStatic = require('serve-static')
 
 app.use(compression())
 

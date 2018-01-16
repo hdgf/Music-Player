@@ -95,7 +95,8 @@ var webpackConfig = merge(baseWebpackConfig, {
       // Absolute path to compiled SPA
       path.join(__dirname, '../music'),
       // List of routes to prerender
-      ['/recommend', '/singer', '/rank', '/search']
+      ['/recommend', '/singer', '/rank', '/search'],
+      {captureAfterTime: 5000}
     )
   ]
 })

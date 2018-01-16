@@ -7,7 +7,7 @@ module.exports = {
     index: path.resolve(__dirname, '../music/index.html'),
     assetsRoot: path.resolve(__dirname, '../music'),
     assetsSubDirectory: 'static',
-    assetsPublicPath: '/',
+    assetsPublicPath: './',
     productionSourceMap: false,
     port: 9000,
     // Gzip off by default as many popular static hosts such as

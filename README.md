@@ -3,6 +3,7 @@
 [![GitHub issues](https://img.shields.io/github/issues/forzeny/Music-Player.svg?style=flat-square)](https://github.com/forzeny/Music-Player/issues)
 [![GitHub forks](https://img.shields.io/github/forks/forzeny/Music-Player.svg?style=flat-square)](https://github.com/forzeny/Music-Player/network)
 [![GitHub license](https://img.shields.io/github/license/forzeny/Music-Player.svg?style=flat-square)](https://github.com/forzeny/Music-Player/blob/master/LICENSE)
+[![Github All Releases](https://img.shields.io/github/downloads/atom/atom/total.svg?style=flat-square)](https://github.com/forzeny/Music-Player)
 
 ## 介绍
 

@@ -7,13 +7,14 @@
 
 ## 介绍
 
-该项目来源[HuangYi](https://github.com/ustbhuangyi), 之前写过他的[eleApp](https://github.com/forzeny/eleApp),后来发现这个音乐 App，可惜未开源，还好他的学生把这个项目开源了，所以就有了这个仓库，后面回提到我的一些改进，总结。
+该项目来源[HuangYi](https://github.com/ustbhuangyi), 之前写过他的[eleApp](https://github.com/forzeny/eleApp),后来发现这个音乐 App，可惜未开源，但是有盗版开源，所以就有了这个仓库，后面回提到我的一些改进，总结。
 
-当前这家公司使用 Vue，之前接触过 React 和 Ng，所以上手较快,上手就是维护 Vuex 项目，老项目代码写的不是很好，为了进一步理解 Vue，所以就准备找几个好的项目来学习所以就有了[eleApp](https://github.com/forzeny/eleApp)和本项目
+毕业后来到的这家公司使用 Vue，之前实习接触过 React 和 Ng，所以上手较快，同时老项目代码写的不是很好，为了进一步理解 Vue，所以就准备找几个好的项目来学习所以就有了[eleApp](https://github.com/forzeny/eleApp)和本项目
 
 数据来源 QQ 音乐 JSONP，部分接口存在 http header 的限制所以用到了 node，托管于 VPS，PM2 部署，Nginx 代理，
 
 ### 扫一扫手机预览 (微信右上角使用浏览器打开)
+
 <img src="./static/erweima.svg" width="200px"/>
 
 [二维码地址](http://45.77.79.163/Music)
@@ -45,7 +46,7 @@
 * master
 * [lib-flex](https://www.npmjs.com/package/amfe-flexible) 添加自适应布局 merge into master √
 * [ssr](https://ssr.vuejs.org/en/) 服务端渲染实现 (待完成)
-* ~~~[pre-render](https://github.com/chrisvfritz/prerender-spa-plugin) 预渲染实现 merge into master x~~~
+* [pre-render](https://github.com/chrisvfritz/prerender-spa-plugin) 预渲染实现 merge into master x
 
 ## 组件
 
@@ -82,8 +83,8 @@
 
 ### 打包
 
-* 分块：根据打包后的[分析报告](https://www.npmjs.com/package/webpack-bundle-analyzer)进行优化
-* 处理 vendor：一般都是这部分体积大，相关类库一般不会变化，所以单独打包和其它文件一样加上 chunkhash 辨别文件是否变化，同时把 manifest 抽离出来，保证 manifest 变化不影响 vendor 变化导致缓存失效,这样默认就是 304，现在我通过 node 把他设置成强缓存了....外加 gzip
+* 根据打包后的[分析报告](https://www.npmjs.com/package/webpack-bundle-analyzer)进行优化
+* 处理 vendor，一般都是这部分体积大，相关类库一般不会变化，所以单独打包和其它文件一样加上 chunkhash 辨别文件是否变化，同时把 manifest 抽离出来，保证 manifest 变化不影响 vendor 变化导致缓存失效,这样默认就是 304，现在我通过 node 把他设置成强缓存了....外加 gzip
 * 采用路由懒加载
 
 ### 适配
@@ -110,9 +111,8 @@
 
 ## 总结
 
-* 截止 20180112 基本完成了我预期的开发(但会在其他分支继续完成其他工作，完成后合并到主分支)，比如滚动库，歌词的处理等是原作者开源项目的，我在这个项目学到的东西主要是学习作者的编程风格，习惯，更好的理解 Vue 中的知识点
+* 截止 20180112 基本完成了我预期的开发，但是滚动库，歌词的处理等是原作者开源项目的，我在这个项目学到的东西主要是学习好的编程风格，习惯，更好的理解 Vue 中的知识点，增加开发经验
 * 有了本项目，[eleApp](https://github.com/forzeny/eleApp)，和我工作中的 Vue 开发经验，以及[element ui](https://github.com/ElemeFE/element)部分源码的阅读，至此已经对 Vue 的使用及特性有了一定的理解，同时我也在阅读 Vue 的一些源代码去深入的理解 Vue，这样会更好的处理开发中遇到的问题
-* 如果你还不清楚 Vue 的学习路线，我最近发现了[这篇文章](https://segmentfault.com/a/1190000012692321)可以去看一看，还可以检验自己是否有知识点遗漏的地方，当然这远远还是不够的，Vue 有更多的东西需要自己去探索使用
 
 ## 本地预览
 

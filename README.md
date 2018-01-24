@@ -107,7 +107,7 @@
 
 试了下腾讯的[weTest](http://wetest.qq.com/product/cloudphone?from=default_automail_new) 收费，没继续用
 
-后来发现 GenyMotion 不准备测试
+后来发现 GenyMotion，[夜神](https://www.yeshen.com/) 不准备测试
 
 ## 总结
 

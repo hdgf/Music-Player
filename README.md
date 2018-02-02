@@ -68,6 +68,7 @@
 
 * vConsole
 * Charles
+* [GIF录制](https://www.cockos.com/licecap/)
 
 ## 注意事项
 
@@ -77,7 +78,7 @@
 
 ## 改进及优化
 
-* QQ 音乐 UI
+* QQ音乐 UI
 * 适配优化
 * 打包优化
 

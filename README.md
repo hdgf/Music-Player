@@ -1,15 +1,15 @@
 # QQ 音乐 WebApp
-[![GitHub stars](https://img.shields.io/github/stars/forzeny/Music-Player.svg?style=flat-square)](https://github.com/forzeny/Music-Player/stargazers)
-[![GitHub issues](https://img.shields.io/github/issues/forzeny/Music-Player.svg?style=flat-square)](https://github.com/forzeny/Music-Player/issues)
-[![GitHub forks](https://img.shields.io/github/forks/forzeny/Music-Player.svg?style=flat-square)](https://github.com/forzeny/Music-Player/network)
-[![GitHub license](https://img.shields.io/github/license/forzeny/Music-Player.svg?style=flat-square)](https://github.com/forzeny/Music-Player/blob/master/LICENSE)
-[![Github All Releases](https://img.shields.io/github/downloads/atom/atom/total.svg?style=flat-square)](https://github.com/forzeny/Music-Player)
+[![GitHub stars](https://img.shields.io/github/stars/yxuchen/Music-Player.svg?style=flat-square)](https://github.com/yxuchen/Music-Player/stargazers)
+[![GitHub issues](https://img.shields.io/github/issues/yxuchen/Music-Player.svg?style=flat-square)](https://github.com/yxuchen/Music-Player/issues)
+[![GitHub forks](https://img.shields.io/github/forks/yxuchen/Music-Player.svg?style=flat-square)](https://github.com/yxuchen/Music-Player/network)
+[![GitHub license](https://img.shields.io/github/license/yxuchen/Music-Player.svg?style=flat-square)](https://github.com/yxuchen/Music-Player/blob/master/LICENSE)
+[![Github All Releases](https://img.shields.io/github/downloads/atom/atom/total.svg?style=flat-square)](https://github.com/yxuchen/Music-Player)
 
 ## 介绍
 
-该项目来源[HuangYi](https://github.com/ustbhuangyi), 之前写过他的[eleApp](https://github.com/forzeny/eleApp),后来发现这个音乐 App，可惜未开源，但是有盗版开源，所以就有了这个仓库，后面回提到我的一些改进，总结。
+该项目来源[HuangYi](https://github.com/ustbhuangyi), 之前写过他的[eleApp](https://github.com/yxuchen/eleApp),后来发现这个音乐 App，可惜未开源，但是有盗版开源，所以就有了这个仓库，后面回提到我的一些改进，总结。
 
-毕业后来到的这家公司使用 Vue，之前实习接触过 React 和 Ng，所以上手较快，同时老项目代码写的不是很好，为了进一步理解 Vue，所以就准备找几个好的项目来学习所以就有了[eleApp](https://github.com/forzeny/eleApp)和本项目
+毕业后来到的这家公司使用 Vue，之前实习接触过 React 和 Ng，所以上手较快，同时老项目代码写的不是很好，为了进一步理解 Vue，所以就准备找几个好的项目来学习所以就有了[eleApp](https://github.com/yxuchen/eleApp)和本项目
 
 数据来源 QQ 音乐 JSONP，部分接口存在 http header 的限制所以用到了 node，托管于 VPS，PM2 部署，Nginx 代理，
 
@@ -19,7 +19,7 @@
 
 [二维码地址](http://45.77.79.163/Music)
 
-[备用：项目演示地址 GitHub Pages](https://forzeny.github.io/Music-Player/music/#/recommend)
+[备用：项目演示地址 GitHub Pages](https://yxuchen.github.io/Music-Player/music/#/recommend)
 
 ## 耗时
 
@@ -96,7 +96,7 @@
 
 #### IOS 适配
 
-* 打包成 ios [Hybrid](https://github.com/forzeny/HybridApp) 系列模拟器正常 如 iphone7 Plus
+* 打包成 ios [Hybrid](https://github.com/yxuchen/HybridApp) 系列模拟器正常 如 iphone7 Plus
 
 <img src="./static/hybrid.gif"/>
 
@@ -113,12 +113,12 @@
 ## 总结
 
 * 截止 20180112 基本完成了我预期的开发，但是滚动库，歌词的处理等是原作者开源项目的，我在这个项目学到的东西主要是学习好的编程风格，习惯，更好的理解 Vue 中的知识点，增加开发经验
-* 有了本项目，[eleApp](https://github.com/forzeny/eleApp)，和我工作中的 Vue 开发经验，以及[element ui](https://github.com/ElemeFE/element)部分源码的阅读，至此已经对 Vue 的使用及特性有了一定的理解，同时我也在阅读 Vue 的一些源代码去深入的理解 Vue，这样会更好的处理开发中遇到的问题
+* 有了本项目，[eleApp](https://github.com/yxuchen/eleApp)，和我工作中的 Vue 开发经验，以及[element ui](https://github.com/ElemeFE/element)部分源码的阅读，至此已经对 Vue 的使用及特性有了一定的理解，同时我也在阅读 Vue 的一些源代码去深入的理解 Vue，这样会更好的处理开发中遇到的问题
 
 ## 本地预览
 
 ```bash
-git clone hhttps://github.com/forzeny/Music-Player.git
+git clone hhttps://github.com/yxuchen/Music-Player.git
 $ cd Music-Player
 $ yarn install
 $ yarn run dev

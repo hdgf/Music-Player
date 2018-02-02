@@ -9,7 +9,7 @@
 
 该项目来源[HuangYi](https://github.com/ustbhuangyi), 之前写过他的[eleApp](https://github.com/yxuchen/eleApp),后来发现这个音乐 App，可惜未开源，但是有盗版开源，所以就有了这个仓库，后面回提到我的一些改进，总结。
 
-毕业后来到的这家公司使用 Vue，之前实习接触过 React 和 Ng，所以上手较快，同时老项目代码写的不是很好，为了进一步理解 Vue，所以就准备找几个好的项目来学习所以就有了[eleApp](https://github.com/yxuchen/eleApp)和本项目
+之前接触过 React 和 Ng，所以上手Vue较快，同时老项目代码写的不是很好，为了进一步理解 Vue，所以就准备找几个好的项目来学习所以就有了[eleApp](https://github.com/yxuchen/eleApp)和本项目
 
 数据来源 QQ 音乐 JSONP，部分接口存在 http header 的限制所以用到了 node，托管于 VPS，PM2 部署，Nginx 代理，
 

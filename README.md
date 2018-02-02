@@ -96,7 +96,7 @@
 
 #### IOS 适配
 
-* 打包成 ios Hybrid 系列模拟器正常 如 iphone7 Plus
+* 打包成 ios [Hybrid](https://github.com/forzeny/HybridApp) 系列模拟器正常 如 iphone7 Plus
 
 <img src="./static/hybrid.gif"/>
 

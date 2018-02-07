@@ -114,6 +114,9 @@
 
 * 201710 - 20180112 几个月的时间, 基本完成了我预期的开发，但是滚动库，歌词的处理等是原作者开源项目的，我在这个项目学到的东西主要是学习好的编程风格，习惯，更好的理解 Vue 中的知识点，增加开发经验
 * 有了本项目，[eleApp](https://github.com/yxuchen/eleApp)，和我工作中的 Vue 开发经验，以及[element ui](https://github.com/ElemeFE/element)部分源码的阅读，至此已经对 Vue 的使用及特性有了一定的理解，同时我也在阅读 Vue 的一些源代码去深入的理解 Vue，这样会更好的处理开发中遇到的问题
+* 工程化8大要素
+
+<img src="./static/project.png"/>
 
 ## 本地预览
 

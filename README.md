@@ -125,7 +125,7 @@ PWA
 ## 本地预览
 
 ```bash
-git clone hhttps://github.com/yxuchen/Music-Player.git
+git clone https://github.com/yxuchen/Music-Player.git
 $ cd Music-Player
 $ yarn install
 $ yarn run dev

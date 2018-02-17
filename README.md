@@ -3,7 +3,6 @@
 [![GitHub issues](https://img.shields.io/github/issues/yxuchen/Music-Player.svg?style=flat-square)](https://github.com/yxuchen/Music-Player/issues)
 [![GitHub forks](https://img.shields.io/github/forks/yxuchen/Music-Player.svg?style=flat-square)](https://github.com/yxuchen/Music-Player/network)
 [![GitHub license](https://img.shields.io/github/license/yxuchen/Music-Player.svg?style=flat-square)](https://github.com/yxuchen/Music-Player/blob/master/LICENSE)
-[![Github All Releases](https://img.shields.io/github/downloads/atom/atom/total.svg?style=flat-square)](https://github.com/yxuchen/Music-Player)
 
 ## 介绍
 

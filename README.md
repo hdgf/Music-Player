@@ -9,17 +9,17 @@
 
 该项目来源[HuangYi](https://github.com/ustbhuangyi), 之前写过他的[eleApp](https://github.com/yxuchen/eleApp),后来发现这个音乐 App，可惜未开源，但是有盗版开源，所以就有了这个仓库，后面回提到我的一些改进，总结。
 
-之前接触过 React 和 Ng，所以上手Vue较快 ***但是为了防止自己的代码和老项目代码写的大头小易，养成不好习惯*** 就准备找个项目来学习，取长补短，同时也为了进一步熟悉理解Vue，所以就有了[eleApp](https://github.com/yxuchen/eleApp)和本项目
+之前接触过 `React` 和 `Ng`，所以上手`Vue`较快 ***但是为了防止自己的代码和老项目代码写的大头小易，养成不好习惯*** 就准备找个项目来学习，取长补短，同时也为了进一步熟悉理解Vue，所以就有了[eleApp](https://github.com/yxuchen/eleApp)和本项目
 
-数据来源 QQ 音乐 JSONP，Node 代理部分接口，托管于 VPS，PM2 部署，Nginx 代理
+数据来源 QQ 音乐 `JSONP`，`Node` 代理部分接口，托管于 `VPS`，`PM2` 部署，`Nginx` 代理
 
-### 扫一扫手机预览 (微信右上角使用浏览器打开)
+### 扫一扫手机预览 (微信右上角使用浏览器打开,网站被墙可访问备用地址)
 
 <img src="./static/erweima.svg" width="200px"/>
 
 [二维码地址](http://45.77.79.163/Music)
 
-[***备用：项目演示地址***](https://yxuchen.github.io/Music-Player/music/#/recommend)
+[***备用：演示地址***](https://yxuchen.github.io/Music-Player/music/#/recommend)
 
 ## 耗时
 

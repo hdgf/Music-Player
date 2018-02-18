@@ -1,4 +1,5 @@
 # QQ 音乐 WebApp
+
 [![GitHub stars](https://img.shields.io/github/stars/yxuchen/Music-Player.svg?style=flat-square)](https://github.com/yxuchen/Music-Player/stargazers)
 [![GitHub issues](https://img.shields.io/github/issues/yxuchen/Music-Player.svg?style=flat-square)](https://github.com/yxuchen/Music-Player/issues)
 [![GitHub forks](https://img.shields.io/github/forks/yxuchen/Music-Player.svg?style=flat-square)](https://github.com/yxuchen/Music-Player/network)
@@ -18,7 +19,7 @@
 
 [二维码地址](http://45.77.79.163/Music)
 
-[备用：项目演示地址 GitHub Pages](https://yxuchen.github.io/Music-Player/music/#/recommend)
+[备用：项目演示地址](https://yxuchen.github.io/Music-Player/music/#/recommend)
 
 ## 耗时
 
@@ -116,6 +117,15 @@
 * 工程化8大要素
 
 <img src="./static/project.png"/>
+
+* 前端架构
+
+<img src="./static/fe.png"/>
+
+* 上线
+
+<img src="./static/rd.png"/>
+
 
 ## 未来展望
 

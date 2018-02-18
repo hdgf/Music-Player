@@ -11,7 +11,7 @@
 
 之前接触过 React 和 Ng，所以上手Vue较快 ***但是为了防止自己的代码和老项目代码写的大头小易，养成不好习惯*** 就准备找个项目来学习，取长补短，同时也为了进一步熟悉理解Vue，所以就有了[eleApp](https://github.com/yxuchen/eleApp)和本项目
 
-数据来源 QQ 音乐 JSONP，部分接口存在 http header 的限制所以用到了 node，托管于 VPS，PM2 部署，Nginx 代理，
+数据来源 QQ 音乐 JSONP，Node 代理部分接口，托管于 VPS，PM2 部署，Nginx 代理
 
 ### 扫一扫手机预览 (微信右上角使用浏览器打开)
 
@@ -32,8 +32,8 @@
 
 ## 相关
 
-* `Vue` @2.3.3, vue-router, vuex, axios
-* `less` (不太习惯 stylus 所以我还是继续使用 less 了)
+* `Vue2.x` `vue-router` `vuex` `axios`
+* `less`
 * `ES6` [standardjs 规范](https://github.com/standard/standard/blob/master/docs/RULES-zhcn.md)
 * `Express`
 * `jsonp` `axios` `promise`
@@ -44,9 +44,9 @@
 ## 分支
 
 * master
-* [lib-flex](https://www.npmjs.com/package/amfe-flexible) 添加自适应布局 merge into master √
-* [ssr](https://ssr.vuejs.org/en/) 服务端渲染实现 (待完成)
-* [pre-render](https://github.com/chrisvfritz/prerender-spa-plugin) 预渲染实现 merge into master x
+* [lib-flex](https://www.npmjs.com/package/amfe-flexible) 添加自适应布局即rem布局 完成并合并到master
+* [pre-render](https://github.com/chrisvfritz/prerender-spa-plugin) 预渲染实现 已完成 没有合并到master
+* [ssr](https://ssr.vuejs.org/en/) 服务端渲染实现 待完成
 
 ## 组件
 
@@ -72,9 +72,9 @@
 
 ## 注意事项
 
-* animation-play-state: paused ios 不支持[解决方案](https://codepen.io/HaoyCn/pen/BZZrLd)
-* min-player [进度条实现](https://codepen.io/xgad/post/svg-radial-progress-meters)
-* vue@2.5+  [ios 不能播放问题](https://github.com/DDFE/DDFE-blog/issues/24)
+* `animation-play-state: paused ios` 不支持[解决方案](https://codepen.io/HaoyCn/pen/BZZrLd)
+* `min-player` [进度条实现](https://codepen.io/xgad/post/svg-radial-progress-meters)
+* `vue@2.5+ ` [ios 不能播放问题](https://github.com/DDFE/DDFE-blog/issues/24)
 
 ## 改进及优化
 
@@ -90,13 +90,13 @@
 
 ### 适配
 
-* 多端同构 webApp, Hybrid，采用 [amfe-flexible@2.x](https://www.npmjs.com/package/amfe-flexible) （相比以前的版本我更倾向于 2.x）配合 px2rem
+* 多端同构 `webApp`, `Hybrid`，采用 [amfe-flexible@2.x](https://www.npmjs.com/package/amfe-flexible) （相比以前的版本我更倾向于 2.x）配合 px2rem
 
-* IOS 的 Safari 浏览器和微信 webview 兼容性和适配问题,此应用未调用设备 API
+* `IOS` 的 `Safari` 浏览器和微信 `webview`兼容性和适配问题,此应用未调用设备 `API`
 
 #### IOS 适配
 
-* 打包成 ios [Hybrid](https://github.com/yxuchen/HybridApp) 系列模拟器正常 如 iphone7 Plus
+* 打包成 `ios` [Hybrid](https://github.com/yxuchen/HybridApp) 系列模拟器正常 如 `iphone7 Plus`
 
 <img src="./static/hybrid.gif"/>
 
@@ -108,12 +108,12 @@
 
 试了下腾讯的[weTest](http://wetest.qq.com/product/cloudphone?from=default_automail_new) 收费，没继续用
 
-后来发现 GenyMotion，[夜神](https://www.yeshen.com/) 不准备测试
+后来发现 GenyMotion，[夜神](https://www.yeshen.com/) 我的电脑运行模拟器卡...
 
 ## 总结
 
-* 201710 - 20180112 几个月的时间, 基本完成了我预期的开发，但是滚动库，歌词的处理等是原作者开源项目的，我在这个项目学到的东西主要是学习好的编程风格，习惯，更好的理解 Vue 中的知识点，增加开发经验
-* 有了本项目，[eleApp](https://github.com/yxuchen/eleApp)，和我工作中的 Vue 开发经验，以及[element ui](https://github.com/ElemeFE/element)部分源码的阅读，至此已经对 Vue 的使用及特性有了一定的理解，同时我也在阅读 Vue 的一些源代码去深入的理解 Vue，这样会更好的处理开发中遇到的问题
+* 201710 - 20180112 几个月的时间, 基本完成了我预期的开发，但是滚动库，歌词的处理等是原作者开源项目的，我在这个项目学到的东西主要是学习好的编程风格，养成良好的习惯，更好的理解 `Vue`，增加开发经验
+* 有了本项目，[eleApp](https://github.com/yxuchen/eleApp)，和我工作中的 `Vue` 开发经验，以及[element ui](https://github.com/ElemeFE/element)部分源码的阅读，至此已经对 Vue 的使用及特性有了一定的理解，同时我也在阅读 `Vue` 的一些源代码去深入的理解 Vue，这样会更好的处理开发中遇到的问题
 * 工程化8大要素
 
 <img src="./static/project.png"/>

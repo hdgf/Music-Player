@@ -99,8 +99,7 @@
 * 打包成 `ios` [Hybrid](https://github.com/yxuchen/HybridApp) 系列模拟器正常 如 `iphone7 Plus`
 * webApp && chrome
 
-<img src="./static/hybrid.gif"/>
-<img src="./static/webApp.gif"/>
+<img src="./static/hybrid.gif"/><img src="./static/webApp.gif"/>
 
 #### Andriod 适配
 

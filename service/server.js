@@ -1,14 +1,14 @@
-var express = require('express')
-var config = require('../config/index')
-var axios = require('axios')
+const express = require('express')
+const config = require('../config/index')
+const axios = require('axios')
 
-var port = process.env.PORT || config.build.port
+const port = process.env.PORT || config.build.port
 
-var app = express()
-var compression = require('compression')
+const app = express()
+const compression = require('compression')
 
-var apiRoutes = express.Router('./')
-// var serveStatic = require('serve-static')
+const apiRoutes = express.Router('./')
+// const serveStatic = require('serve-static')
 
 app.use(compression())
 
@@ -27,7 +27,7 @@ apiRoutes.get('/getDisc', function(req, res) {
     })
 })
 apiRoutes.get('/getMusicList', function(req, res) {
-  var url = 'https://c.y.qq.com/splcloud/fcgi-bin/fcg_get_diss_by_tag.fcg'
+  const url = 'https://c.y.qq.com/splcloud/fcgi-bin/fcg_get_diss_by_tag.fcg'
   axios
     .get(url, {
       headers: {
@@ -45,7 +45,7 @@ apiRoutes.get('/getMusicList', function(req, res) {
 })
 
 apiRoutes.get('/lyric', function(req, res) {
-  var url = 'https://c.y.qq.com/lyric/fcgi-bin/fcg_query_lyric_new.fcg'
+  const url = 'https://c.y.qq.com/lyric/fcgi-bin/fcg_query_lyric_new.fcg'
 
   axios
     .get(url, {
@@ -56,10 +56,10 @@ apiRoutes.get('/lyric', function(req, res) {
       params: req.query
     })
     .then(response => {
-      var ret = response.data
+      const ret = response.data
       if (typeof ret === 'string') {
-        var reg = /^\w+\(({[^\(\)]+})\)$/
-        var matches = response.data.match(reg)
+        const reg = /^\w+\(({[^\(\)]+})\)$/
+        const matches = response.data.match(reg)
         if (matches) {
           ret = JSON.parse(matches[1])
         }
@@ -73,7 +73,7 @@ apiRoutes.get('/lyric', function(req, res) {
 
 app.use('/api', apiRoutes)
 
-var oneYear = 60 * 1000 * 60 * 24 * 365
+const oneYear = 60 * 1000 * 60 * 24 * 365
 
 app.use(express.static('../music', { maxAge: oneYear }))
 

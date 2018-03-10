@@ -17,8 +17,6 @@
 
 <img src="./static/erweima.svg" width="200px"/>
 
-[二维码地址](http://45.77.79.163/Music)
-
 [***备用：演示地址***](https://yxuchen.github.io/Music-Player/music/#/recommend)
 
 ## 耗时
@@ -79,13 +77,13 @@
 ## 改进及优化
 
 * QQ音乐 UI
-* 适配优化
 * 打包优化
+* 适配优化
 
 ### 打包
 
 * 根据打包后的[分析报告](https://www.npmjs.com/package/webpack-bundle-analyzer)进行优化
-* 处理 vendor，一般都是这部分体积大，相关类库一般不会变化，所以单独打包和其它文件一样加上 chunkhash 辨别文件是否变化，同时把 manifest 抽离出来，保证 manifest 变化不影响 vendor 变化导致缓存失效,这样默认就是 304，现在我通过 node 把他设置成强缓存了....外加 gzip
+* 处理 vendor，一般都是这部分体积大，相关类库一般不会变化，所以单独打包和其它文件一样加上 chunkhash 辨别文件是否变化，同时把 manifest 抽离出来，保证 manifest 变化不影响 vendor 变化导致重新缓存,这样默认就是304，现在我通过 node 把他设置成强缓存了....外加加载gzip
 * 采用路由懒加载
 
 ### 适配
@@ -97,21 +95,22 @@
 #### IOS 适配
 
 * 打包成 `ios` [Hybrid](https://github.com/yxuchen/HybridApp) 系列模拟器正常 如 `iphone7 Plus`
+
+<img src="./static/hybrid.gif"/>
+
 * webApp && chrome
 
-<img src="./static/hybrid.gif"/><img src="./static/webApp.gif"/>
+<img src="./static/webApp.gif"/>
 
 #### Andriod 适配
 
-试了下腾讯的[weTest](http://wetest.qq.com/product/cloudphone?from=default_automail_new) 收费，没继续用
-
-后来发现 GenyMotion，[夜神](https://www.yeshen.com/) 我的电脑运行模拟器卡...
+GenyMotion，[夜神](https://www.yeshen.com/) 我的电脑运行模拟器卡...
 
 ## 总结
 
 * 201710 - 20180112 几个月的时间, 基本完成了我预期的开发，但是滚动库，歌词的处理等是原作者开源项目的，我在这个项目学到的东西主要是学习好的编程风格，养成良好的习惯，更好的理解 `Vue`，增加开发经验
 * 有了本项目，[eleApp](https://github.com/yxuchen/eleApp)，和我工作中的 `Vue` 开发经验，以及[element ui](https://github.com/ElemeFE/element)部分源码的阅读，至此已经对 Vue 的使用及特性有了一定的理解，同时我也在阅读 `Vue` 的一些源代码去深入的理解 Vue，这样会更好的处理开发中遇到的问题
-* 工程化8大要素
+* 工程化大致反向
 
 <img src="./static/project.png"/>
 
@@ -122,7 +121,6 @@
 * 上线
 
 <img src="./static/rd.png"/>
-
 
 ## 未来展望
 
